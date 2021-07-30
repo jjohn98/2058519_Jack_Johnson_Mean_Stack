@@ -1,0 +1,15 @@
+/*DesignShellCSSFile.css
+  Author: Jack Johnson
+*/
+h1{color:darkred; font-size: 45px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;text-align: center; border-style: solid;border-color: tomato;}
+h2{color:limegreen; font-size: 40px; font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;border-style: dotted;border-color: violet;}
+h3{color:mediumblue; font-size: 35px; font-family: Arial, Helvetica, sans-serif;text-align: center; border-style: ridge;border-color: seagreen;}
+h4{color:sandybrown; font-size: 30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-align: center;}
+h5{color:springgreen; font-size: 25px; font-family: fantasy;text-align: center;}
+div{color: blueviolet;font-size: 20px;text-align: center;}
+p{color:navy;font-size: 15px; font-family: 'Times New Roman', Times, serif;text-align: center;}
+body{color: saddlebrown;border-style: groove;text-align: center;}
+
+header{border-style: solid;}
+
+footer{border-style: ridge;}
