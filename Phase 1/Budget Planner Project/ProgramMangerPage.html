@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Program Manager Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/JavaScript" src="budgetplanner.js"></script>
+</head>
+<body style="border-color:crimson; border-style: dashed; background-color:darkgray;">
+    <div>
+        <h1 style="text-align: center;">Add New Budget</h1>
+    </div>
+    <div class="container" style="border-style:double; border-color: red; padding: 15px;">
+        <div class="row" style="align-self: center;">
+            <div class="col" style="text-align: center;">Client Name</div>
+            <div class="col" style="text-align: center;"><input type="text" id="clientName"></div>
+        </div>
+        <div class="row" style="align-self: center;">
+            <div class="col" style="text-align: center;">Project Name</div>
+            <div class="col" style="text-align: center;"><input type="text" id="projectName"></div>
+        </div>
+        <div class="row" style="align-self: center;">
+            <div class="col" style="text-align: center;">Budget</div>
+            <div class="col" style="text-align: center;"><input type="text" id="budgetAmount"></div>
+        </div>
+    </div>
+    <div class="container" style="align-self: center; border-color: black; border-style: double; padding: 15px;">
+        <div class="row" style="align-self: center;">
+            <div class="col" style="text-align: center;"><button onclick="StoreData()">Add Budget</button></div>
+            <div class="col" style="text-align: center;"><button onclick="ClearFields()">Clear Entry Fields</button></div>
+        </div>
+    </div>
+    <div>
+        <a class="btn btn-primary" href="Home.html" role="button">Back to home</a>
+    </div>
+</body>
+</html>
