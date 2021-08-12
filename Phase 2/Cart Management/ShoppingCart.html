@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Shopping Cart</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src='CartManagement.js'></script>
+</head>
+<body onload="getData()">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="ShoppingHome.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <img class="bi me-2" width="50" height="32" src="https://i.pinimg.com/originals/0d/88/62/0d88626a422b24ea390e7c4eea6d1ecd.png"></img>
+          <span class="fs-4" style="color: black;">Fruits Market: Shopping Home</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="ShoppingHome.html" class="nav-link active" aria-current="page" style="background-color: red;">Home</a></li>
+          <li class="nav-item"><a href="ShoppingCart.html" class="nav-link" style="color: red;">Your Cart</a></li>
+        </ul>
+    </header>
+
+    <div><h1 style="text-align: center;">Fruit Market: Shopping Cart</h1></div>
+    <div class="container" style="margin: auto; width: 50%;">
+        <h2 style="text-align: center;">Your Cart</h2>
+        <table id="table" class="table table-striped" style="border-style: ridge; border-color: crimson; text-align: center; margin: auto; width: 50%;">
+            <tr>
+                <td>Item Name</td>
+                <td>Item Price</td>
+            </tr>
+        </table>
+    </div>
+    <div id="total" style="text-align: center; font-size:x-large;">   
+    </div>
+</body>
+</html>
