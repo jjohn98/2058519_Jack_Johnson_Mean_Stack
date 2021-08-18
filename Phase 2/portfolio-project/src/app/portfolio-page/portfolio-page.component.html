@@ -1,0 +1,44 @@
+<h4>Welcome User {{activeUser}}!</h4>
+<div class="container" style="margin: auto; width: 50%;">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+        <form #portfolioRef="ngForm" (ngSubmit)="addContact(portfolioRef)">
+            <label for="contactName">Contact Name: </label><br/>
+            <input type="text" name="contactName" size="60" ngModel placeholder="Enter your contact's name...">
+            <br/>
+
+            <label for="contactNumber">Phone Number: </label><br/>
+            <input type="text" name="contactNumber" size="60" ngModel placeholder="Enter your contact's phone number...">
+            <br/>
+
+            <input type="submit" value="Add Contact">
+            <input type="reset">
+        </form>
+        </div>
+        <div class="col-md-3"></div>
+          <br>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <table #table class="table table-striped" style="border-style: ridge; border-color: crimson; text-align: center; margin: auto; width: 50%;">
+                <tr>
+                    <th *ngFor="let column of headers">
+                        {{column}}
+                    </th>   
+                </tr>
+
+                <tr *ngFor = "let row of userContacts">
+                    <td *ngFor = "let column of headers">
+                        {{row[column]}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <button value="Reset Accounts (Debug)" (click)="loadContacts(portfolioRef)">Load Contacts</button><br/>
+    <button value="Reset Accounts (Debug)" (click)="clearContacts()">Reset Contacts</button><br/>
+</div>

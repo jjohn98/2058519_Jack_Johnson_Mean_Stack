@@ -1,0 +1,17 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <span class="fs-4" style="color: black;">Amazing Portfolio!</span>
+  </a>
+
+  <ul class="nav nav-pills">
+    <li class="nav-item"><button (click)="clickLogin()" class="nav-link active" aria-current="page" style="background-color: red;">Login</button></li>
+    <li class="nav-item"><button (click)="clickRegister()" class="nav-link" style="color: red;">Register</button></li>
+    <li class="nav-item"><button (click)="clickPortfolio()" class="nav-link" style="color: red;">My Portfolio</button></li>
+    <li class="nav-item"><button (click)="clickLogout()" class="nav-link active" aria-current="page" style="background-color: red;">Logout</button></li>
+  </ul>
+</header>
+<div>
+  <app-login-form [hidden] = "loginFlag"></app-login-form>
+  <app-registration-form [hidden] = "registerFlag"></app-registration-form>
+  <app-portfolio-page [hidden] = "portfolioFlag"></app-portfolio-page>
+</div>

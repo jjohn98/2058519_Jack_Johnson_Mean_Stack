@@ -1,0 +1,25 @@
+<div><h1 style="text-align: center;">Login Form</h1></div>
+
+<div class="container" style="margin: auto; width: 50%;">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form #loginRef="ngForm" (ngSubmit)="login(loginRef)">
+                <label for="username">Username: </label><br/>
+                <input type="text" name="username" size="60" ngModel placeholder="Enter your username here...">
+                <br/>
+
+                <label for="password">Password: </label><br/>
+                <input type="password" name="password" size="60" ngModel placeholder="Enter your password here...">
+                <br/>
+
+                <input type="submit" value="Login">
+                <input type="reset">
+            </form>
+              <br>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <button value="Reset Accounts (Debug)" (click)="resetAccounts()">Reset Accounts</button><br/>
+    {{msg}}
+</div>
