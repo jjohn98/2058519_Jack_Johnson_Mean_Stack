@@ -1,0 +1,44 @@
+<h1 style="text-align: center;">Welcome to the task tracker!</h1>
+<div class="container">
+  <div class="row">
+      <div class="col-md-6" style="border-style: solid; border-color: rebeccapurple;">
+        <h3>Add Task</h3>
+      <form #taskRef="ngForm" (ngSubmit)="addTask(taskRef)">
+          <label for="employeeID">Employee ID: </label><br/>
+          <input type="text" name="employeeID" size="60" ngModel placeholder="Enter your employee ID...">
+          <br/>
+
+          <label for="employeeName">Name: </label><br/>
+          <input type="text" name="employeeName" size="60" ngModel placeholder="Enter your name...">
+          <br/>
+
+          <label for="employeeTask">Task: </label><br/>
+          <input type="text" name="employeeTask" size="60" ngModel placeholder="Enter your task...">
+          <br/>
+
+          <label for="taskDeadline">Dead Line: </label><br/>
+          <input type="text" name="taskDeadline" size="60" ngModel placeholder="Enter the date of your deadline...">
+          <br/>
+
+          <input type="submit" value="Add Task">
+          <input type="reset">
+      </form>
+      </div>
+      <div class="col-md-6" style="border-style: solid; border-color: rebeccapurple;">
+        <h3>To-Do List</h3>
+        <table #table class="table table-striped" style="border-style: ridge; text-align: center; margin: auto; width: 50%;">
+          <tr>
+            <th *ngFor="let column of headers">
+              {{column}}
+          </th> 
+          </tr>
+          <tr *ngFor = "let row of tasks">
+            <td *ngFor = "let column of headers">
+              {{row[column]}}
+            </td>
+          </tr>
+        </table>
+        <button value="Clear Tasks" (click)="resetTasks()">Reset Tasks</button><br/>
+    </div>
+  </div>
+</div>
