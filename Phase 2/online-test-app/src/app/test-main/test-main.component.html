@@ -1,0 +1,54 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+    <div *ngFor="let question of questionArray; let i = index">
+        <p>{{question.number}}) {{question.question}}</p>
+        <input type="radio" formControlName="{{question.number}}" value="{{question.answer1}}"/> <label style="color: black;"> {{question.answer1}}</label>
+        <div *ngIf="question.answer1 == question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer">
+            <p style="color: green;">Correct Answer</p>
+        </div>
+        <div *ngIf="question.answer1 != question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer && question.answer1 == myForm.get(question.number)?.value">
+            <p style="color: red;">Selected Answer</p>
+        </div>
+        <div *ngIf="question.answer1 == question.correctAnswer && testOver && myForm.get(question.number)?.value == question.correctAnswer">
+            <p style="color: green;">Selected Answer is Correct</p>
+        </div><br>
+        <input type="radio" formControlName="{{question.number}}" value="{{question.answer2}}"/> <label style="color: black;"> {{question.answer2}}</label>
+        <div *ngIf="question.answer2 == question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer">
+            <p style="color: green;">Correct Answer</p>
+        </div>
+        <div *ngIf="question.answer2 != question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer && question.answer2 == myForm.get(question.number)?.value">
+            <p style="color: red;">Selected Answer</p>
+        </div>
+        <div *ngIf="question.answer2 == question.correctAnswer && testOver && myForm.get(question.number)?.value == question.correctAnswer">
+            <p style="color: green;">Selected Answer is Correct</p>
+        </div><br>
+        <input type="radio" formControlName="{{question.number}}" value="{{question.answer3}}"/> <label style="color: black;"> {{question.answer3}}</label>
+        <div *ngIf="question.answer3 == question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer">
+            <p style="color: green;">Correct Answer</p>
+        </div>
+        <div *ngIf="question.answer3 != question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer && question.answer3 == myForm.get(question.number)?.value">
+            <p style="color: red;">Selected Answer</p>
+        </div>
+        <div *ngIf="question.answer3 == question.correctAnswer && testOver && myForm.get(question.number)?.value == question.correctAnswer">
+            <p style="color: green;">Selected Answer is Correct</p>
+        </div><br>
+        <input type="radio" formControlName="{{question.number}}" value="{{question.answer4}}"/> <label style="color: black;"> {{question.answer4}}</label>
+        <div *ngIf="question.answer4 == question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer">
+            <p style="color: green;">Correct Answer</p>
+        </div>
+        <div *ngIf="question.answer4 != question.correctAnswer && testOver && myForm.get(question.number)?.value != question.correctAnswer && question.answer4 == myForm.get(question.number)?.value">
+            <p style="color: red;">Selected Answer</p>
+        </div>
+        <div *ngIf="question.answer4 == question.correctAnswer && testOver && myForm.get(question.number)?.value == question.correctAnswer">
+            <p style="color: green;">Selected Answer is Correct</p>
+        </div><br><br>
+    </div>
+    <div *ngIf="totalScore >= 7 && testOver">
+        <h3 style="color: green;">You Pass! You got {{totalScore}} correct! Good Job!</h3>
+        <h3>The correct answers have been highlighted in green.</h3>
+    </div>
+    <div *ngIf="totalScore < 7 && testOver">
+        <h3 style="color: red;">You failed. You got {{totalScore}} correct. Try again!</h3>
+        <h3>The correct answers have been highlighted in green.</h3>
+    </div>
+    <input type="submit" value="Submit Test">
+</form>

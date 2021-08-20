@@ -1,0 +1,92 @@
+[
+    {
+        "number":"1",
+        "question":"Which of the following is true about AngularJS?",
+        "answer1":"AngularJS is an HTML framework",
+        "answer2":"AngularJS is a Java framework",
+        "answer3":"AngularJS is a JavaScript framework",
+        "answer4":"AngularJS is a SQL framework",
+        "correctAnswer":"AngularJS is a JavaScript framework"
+    },
+    {
+        "number":"2",
+        "question":"Who is known as the father of AngularJS",
+        "answer1":"Brad Green",
+        "answer2":"Misko Hevery",
+        "answer3":"Adam Abrons",
+        "answer4":"Mike Adams",
+        "correctAnswer":"Misko Hevery"
+    },
+    {
+        "number":"3",
+        "question":"Which of the following directive is used to bind the value of HTML controls to application data?",
+        "answer1":"ng-app",
+        "answer2":"ng-init",
+        "answer3":"ng-model",
+        "answer4":"ng-hide",
+        "correctAnswer":"ng-model"
+    },
+    {
+        "number":"4",
+        "question":"Which of the following communities does Angular JS belong to?",
+        "answer1":"Twitter",
+        "answer2":"Facebook",
+        "answer3":"Google",
+        "answer4":"Microsoft",
+        "correctAnswer":"Google"
+    },
+    {
+        "number":"5",
+        "question":"What is .subscribe?",
+        "answer1":"Streams data in asynchronously",
+        "answer2":"Streams data in synchronously",
+        "answer3":"Both",
+        "answer4":"Neither",
+        "correctAnswer":"Streams data in asynchronously"
+    },
+    {
+        "number":"6",
+        "question":"TypeScript is a super set of which language?",
+        "answer1":"Javascript",
+        "answer2":"C#",
+        "answer3":"ReactJS",
+        "answer4":"Java",
+        "correctAnswer":"Javascript"
+    },
+    {
+        "number":"7",
+        "question":"Which command is used to generate a JavaScript file from a TypeScript file?",
+        "answer1":"npm filename.ts",
+        "answer2":"tsc filename.ts",
+        "answer3":"tsc -js filename.ts",
+        "answer4":"All of the above",
+        "correctAnswer":"tsc filename.ts"
+    },
+    {
+        "number":"8",
+        "question":"Which of the following are primitive types supported in TypeScript",
+        "answer1":"Number",
+        "answer2":"String",
+        "answer3":"Boolean",
+        "answer4":"All of the above",
+        "correctAnswer":"All of the above"
+    },
+    {
+        "number":"9",
+        "question":"When should you use a rest parameter?",
+        "answer1":"Types of parameters is not known",
+        "answer2":"The number of parameters is not known",
+        "answer3":"The function needs to be executed asynchronously",
+        "answer4":"The function is called recursively",
+        "correctAnswer":"The number of parameters is not known"
+    },
+    {
+        "number":"10",
+        "question":"What do you need to import to be able to use a FormsModule?",
+        "answer1":"FormsModule",
+        "answer2":"ReactiveFormsModule",
+        "answer3":"Forms",
+        "answer4":"ModuleFormer",
+        "correctAnswer":"FormsModule"
+    }
+]
