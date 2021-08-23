@@ -44,11 +44,11 @@
     </div>
     <div *ngIf="totalScore >= 7 && testOver">
         <h3 style="color: green;">You Pass! You got {{totalScore}} correct! Good Job!</h3>
-        <h3>The correct answers have been highlighted in green.</h3>
+        <h3>The correct answers are now shown above.</h3>
     </div>
     <div *ngIf="totalScore < 7 && testOver">
         <h3 style="color: red;">You failed. You got {{totalScore}} correct. Try again!</h3>
-        <h3>The correct answers have been highlighted in green.</h3>
+        <h3>The correct answers are now shown above.</h3>
     </div>
     <input type="submit" value="Submit Test">
 </form>

@@ -42,7 +42,7 @@
         "answer2":"Streams data in synchronously",
         "answer3":"Both",
         "answer4":"Neither",
-        "correctAnswer":"Streams data in asynchronously"
+        "correctAnswer":"Both"
     },
     {
         "number":"6",
