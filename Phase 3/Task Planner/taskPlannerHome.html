@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Task Planner</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 style="text-align: center;">Task Planner Home Page</h1>
+    <br>
+    <br>
+    <h3>Add Task</h3>
+    <form action="addTask" method="POST">
+        <label>Employee Id:</label>
+        <input type="text" name="employeeId"><br>
+        <label>Task Id:</label>
+        <input type="text" name="taskId"><br>
+        <label>Task Description:</label>
+        <input type="text" name="taskDescription"><br>
+        <label>Deadline: </label>
+        <input type="date" name="deadline"><br>
+        <input type="submit" value="Add Task"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br>
+    <br>
+    <h3>Delete Task</h3>
+    <form action="deleteTask">
+        <label>Task Id: </label>
+        <input type="text" name="deleteId"><br>
+        <input type="submit" value="Delete Task"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br>
+    <br>
+    <h3><a href="listTaskPage">List All Tasks</a></h3>
+    
+</body>
+</html>
