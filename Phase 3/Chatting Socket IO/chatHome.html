@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script type="text/JavaScript">
+        let ws = new WebSocket("ws://localhost:9090");
+
+        ws.onopen=()=>
+        {
+            sendData = () => 
+            {
+                let msg = document.getElementById("msg").value;
+                let username = document.getElementById("username").value;
+                let toSend = {"msg":msg,"username":username};
+
+                ws.send(JSON.stringify(toSend));
+
+                let newMsg = document.createElement('li');
+                newMsg.innerHTML = document.getElementById("username").value + " says: " + document.getElementById("msg").value;
+                document.getElementById("chatHistory").appendChild(newMsg);
+
+                document.getElementById("msg").value = "";
+            }
+        }
+
+        ws.onmessage = (msg) =>
+        {
+            let newMsg = document.createElement('li');
+            newMsg.innerHTML = "Server says: " + msg.data;
+            document.getElementById("chatHistory").appendChild(newMsg);
+        }
+    </script>
+</head>
+<body>
+    <h2 style="text-align: center;">Welcome to the support chat!</h2>
+    <form>
+        <label for="username">Name: </label>
+        <input type="text" id="username"><br>
+        <label for="msg">Message: </label>
+        <input type="text" id="msg"><br>
+        <input type="button" value="Send Message" onclick="sendData()">
+        <input type="reset" value="reset">
+    </form>
+    <br>
+    <br>
+    <ul id="chatHistory">
+
+    </ul>
+</body>
+</html>
