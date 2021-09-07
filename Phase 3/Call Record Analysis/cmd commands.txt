@@ -1,0 +1,8 @@
+FROM COMMAND LINE:
+Inside of your /MongoDB/Tools/100/bin folder:
+
+run the command:
+
+mongoimport --jsonArray -d callrecordanalysis -c call_log C:\Users\elipwns7\AppData\Roaming\SPB_Data\MEAN_Stack_TCS_July_2021_Batch\call_data.json
+
+This will automatically read the json file and import the data into the database and collection specified by -d and -c respectively!
